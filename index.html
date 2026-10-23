@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" data-app-slug="inscrybe" data-langs="en,es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Inscrybe: Subliminal Maker and Player for iPhone</title>
+  <meta name="description" content="Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch control and a Studio that measures how hidden each voice is.">
+  <link rel="canonical" href="https://armandojimenez.dev/inscrybe/">
+  <link rel="alternate" hreflang="en" href="https://armandojimenez.dev/inscrybe/">
+  <link rel="alternate" hreflang="es" href="https://armandojimenez.dev/inscrybe/es/">
+  <link rel="alternate" hreflang="x-default" href="https://armandojimenez.dev/inscrybe/">
+  <meta name="theme-color" content="#08061A">
+  <meta name="color-scheme" content="dark light">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Inscrybe">
+  <meta property="og:title" content="Inscrybe: play your subliminals, make your own">
+  <meta property="og:description" content="Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch control and a Studio that measures how hidden each voice is.">
+  <meta property="og:url" content="https://armandojimenez.dev/inscrybe/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta property="og:image" content="https://armandojimenez.dev/inscrybe/assets/og-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Inscrybe icon’s two glass planes with a line of light passing through them">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inscrybe: play your subliminals, make your own">
+  <meta name="twitter:description" content="Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch control and a Studio that measures how hidden each voice is.">
+  <meta name="twitter:image" content="https://armandojimenez.dev/inscrybe/assets/og-en.png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" as="image" href="assets/screens/en/player-480.webp" imagesrcset="assets/screens/en/player-480.webp 480w, assets/screens/en/player-720.webp 720w, assets/screens/en/player-960.webp 960w" imagesizes="(min-width: 960px) 340px, 64vw" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=b6e4274e18">
+  <script>
+    // A headline keeps the deck's line breaks: its size comes down until every line fits its column (to 80% at most),
+    // else its lines wrap, balanced. Run right after each headline, before it's painted, and again on resize.
+    window.fit = function (h) {
+      h.style.fontSize = ''; h.classList.remove('fits');
+      var base = parseFloat(getComputedStyle(h).fontSize), room = h.clientWidth, widest = 0, r = document.createRange();
+      h.classList.add('fits');
+      h.querySelectorAll('.line').forEach(function (l) { r.selectNodeContents(l); widest = Math.max(widest, r.getBoundingClientRect().width); });
+      var k = widest > room ? room / widest * 0.995 : 1;
+      if (k < 0.8) h.classList.remove('fits'); else if (k < 1) h.style.fontSize = (base * k).toFixed(2) + 'px';
+    };
+    addEventListener('resize', function () { document.querySelectorAll('[data-fit]').forEach(fit); });
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Inscrybe","alternateName":["Inscrybe: Subliminal Maker","Inscrybe Subliminal Player"],"description":"Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch control and a Studio that measures how hidden each voice is.","applicationCategory":"MusicApplication","applicationSubCategory":"LifestyleApplication","operatingSystem":"iOS 26.1 or later","inLanguage":"en","url":"https://armandojimenez.dev/inscrybe/","image":"https://armandojimenez.dev/inscrybe/assets/icon-512.png","screenshot":[{"@type":"ImageObject","contentUrl":"https://armandojimenez.dev/inscrybe/assets/screens/en/player-960.webp","caption":"Inscrybe’s subliminal player playing “I Am Amazing (2x)”, its second of three plays"},{"@type":"ImageObject","contentUrl":"https://armandojimenez.dev/inscrybe/assets/web/en/library-1200.webp","caption":"The Library in Inscrybe: folders, a Mix and tracks with their covers, “I Am Amazing (2x)” playing"},{"@type":"ImageObject","contentUrl":"https://armandojimenez.dev/inscrybe/assets/web/en/studio-1200.webp","caption":"A subliminal project in Inscrybe’s Studio: its Voice, Music and Rain layers with their waveforms and volumes"},{"@type":"ImageObject","contentUrl":"https://armandojimenez.dev/inscrybe/assets/web/en/hidden-1200.webp","caption":"How Hidden on a project’s voice, set to Hidden"},{"@type":"ImageObject","contentUrl":"https://armandojimenez.dev/inscrybe/assets/web/en/privacy-1200.webp","caption":"The same Lock Screen twice: “Become a Millionaire (2x)” playing, and as Discreet Mode shows it, “Afterglow Avenue” by Lucia Wren"}],"publisher":{"@type":"Organization","name":"Believe PR","url":"https://armandojimenez.dev/"},"author":{"@type":"Person","name":"Armando Jimenez","url":"https://armandojimenez.dev/"}}</script>
+  <script src="behavior.js?v=8fca79352f" defer></script>
+  <script src="light.js?v=c4f4e980da" defer></script>
+  <script>window.LANDING_STRINGS = {"copied":"Email address copied"};</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__home" href="" aria-label="Inscrybe home">
+        <img src="assets/icon-64.png" alt="" width="32" height="32">
+        <span class="wordmark">Inscrybe</span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#player">Player</a>
+        <a href="#studio">Studio</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#support">Support</a>
+      </nav>
+      <a class="nav__lang" href="es/" hreflang="es" lang="es" aria-label="Leer en español">ES</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <canvas class="hero__light" aria-hidden="true"></canvas>
+      <div class="hero__words" aria-hidden="true"><span class="word word--1">I love who I am.</span><span class="word word--2">I am a money magnet.</span><span class="word word--3">Love comes to me easily.</span><span class="word word--4">I am unstoppable.</span></div>
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 id="hero-title" data-fit><span class="line">Play your subliminals.</span> <span class="line">Make <span class="accent">your own</span>.</span></h1>
+          <p class="lead">Play the subliminals you have and make your own, each voice measured so you know how hidden it is. Loop a track as many times as you want and control it from Apple Watch.</p>
+          <div class="get get--hero"><span class="store-badge store-badge--soon" data-store="apple" aria-disabled="true"><img src="assets/app-store-badge.svg" alt="Coming soon to the App Store" height="48" width="144"></span><p class="get__label"><span class="get__soon">Coming soon</span><span class="get__devices">For iPhone, iPad and iPhone Duo</span></p></div>
+          <script>fit(document.getElementById('hero-title'))</script>
+        </div>
+        <div class="hero__glass" data-glass aria-hidden="true"></div>
+        <figure class="hero__device">
+          <div class="phone" data-phone>
+            <div class="phone__screen">
+              <img src="assets/screens/en/player-960.webp" srcset="assets/screens/en/player-480.webp 480w, assets/screens/en/player-720.webp 720w, assets/screens/en/player-960.webp 960w" sizes="(min-width: 960px) 340px, 64vw" width="1320" height="2868" alt="Inscrybe’s subliminal player playing “I Am Amazing (2x)”, its second of three plays" fetchpriority="high">
+              <span class="phone__island" aria-hidden="true"></span>
+            </div>
+          </div>
+          <img class="phone__lift" src="assets/screens/en/plays-720.webp" width="876" height="205" alt="" aria-hidden="true" style="--lift-x:50.076;--lift-y:65.272;--lift-w:34.862">
+        </figure>
+      </div>
+    </section>
+
+  <section class="feature feature--light mode-player feature--split" id="player" aria-labelledby="player-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="player-title" data-fit><span class="line">All your subliminals</span> <span class="line">in <span class="accent">one place</span></span></h2>
+        <p class="lead">Bring in what you already listen to: files, whole folders, ZIPs, videos and links. Folders and playlists play in the order you set.</p><script>fit(document.getElementById('player-title'))</script>
+        
+        <dl class="facts"><div class="fact"><dt>Any format</dt><dd>MP3, AAC, FLAC, WAV, Opus, Ogg, WebM, MKV, WMA and more, and the audio of a video.</dd></div><div class="fact"><dt>Repeat a set number of times</dt><dd>Loop a track as many times as you set, then go on to the next or stop.</dd></div><div class="fact"><dt>Plays per entry</dt><dd>Each playlist entry can play its own number of times.</dd></div><div class="fact"><dt>Volume boost and speed</dt><dd>Boost quiet recordings, and play tracks slower or faster.</dd></div><div class="fact"><dt>Mixes</dt><dd>Several tracks at once as one, each at its own volume and side.</dd></div><div class="fact"><dt>Background Sound</dt><dd>Rain, ocean or a binaural beat under anything you play.</dd></div></dl>
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/library-1200.webp" srcset="assets/web/en/library-600.webp 600w, assets/web/en/library-900.webp 900w, assets/web/en/library-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1612" height="2386" alt="The Library in Inscrybe: folders, a Mix and tracks with their covers, “I Am Amazing (2x)” playing" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--dark mode-player feature--split feature--flip" id="sleep" aria-labelledby="sleep-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="sleep-title" data-fit><span class="line">Fall <span class="accent">asleep</span> to</span> <span class="line">your subliminals</span></h2>
+        <p class="lead">Set the sleep timer by minutes, or to stop at the end of a track, a folder or a playlist. It fades out at the end and leaves the night quiet: no other app’s audio starts after it.</p><script>fit(document.getElementById('sleep-title'))</script>
+        
+        <dl class="facts facts--short"><div class="fact"><dt>Up Next</dt><dd>See the rest of the night, and change it for this time only.</dd></div><div class="fact"><dt>Long tracks resume</dt><dd>Pick up where you stopped.</dd></div></dl>
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/sleep-1200.webp" srcset="assets/web/en/sleep-600.webp 600w, assets/web/en/sleep-900.webp 900w, assets/web/en/sleep-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1450" height="2576" alt="The Sleep Timer set to stop at the end of the playlist “Before Bed”, with Up Next below" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--light mode-player feature--split" id="visuals" aria-labelledby="visuals-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="visuals-title" data-fit><span class="line">See your <span class="accent">affirmations</span></span> <span class="line">while you listen</span></h2>
+        <p class="lead">Visuals show your affirmations on screen while a track plays, flashed within photosensitivity limits or steady, over your cover or a slideshow of your own pictures. Save them as a video to Photos.</p><script>fit(document.getElementById('visuals-title'))</script>
+        
+        
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/visuals-1200.webp" srcset="assets/web/en/visuals-600.webp 600w, assets/web/en/visuals-900.webp 900w, assets/web/en/visuals-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1657" height="2267" alt="Visuals in their Subliminal look: affirmations flashing over the player" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--dark mode-player feature--center" id="everywhere" aria-labelledby="everywhere-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="everywhere-title" data-fit><span class="line">Control it from</span> <span class="line">your <span class="accent">Apple Watch</span></span></h2>
+        <p class="lead">Your subliminals wherever you listen: the Lock Screen, Control Center, widgets, CarPlay, Siri and Shortcuts, AirPlay, and an Apple Watch remote with complications.</p><script>fit(document.getElementById('everywhere-title'))</script>
+        
+        
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/everywhere-1200.webp" srcset="assets/web/en/everywhere-600.webp 600w, assets/web/en/everywhere-900.webp 900w, assets/web/en/everywhere-1200.webp 1200w" sizes="(min-width: 720px) 520px, 92vw" width="1525" height="2227" alt="The Apple Watch app controlling “I Am Amazing (2x)” as it plays on the iPhone" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--light mode-player feature--split" id="stats" aria-labelledby="stats-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="stats-title" data-fit><span class="line">Keep your <span class="accent">streak</span></span> <span class="line">going</span></h2>
+        <p class="lead">Stats show your hours, a daily goal and your streak, with your week, your months and years, your records and when you listen.</p><script>fit(document.getElementById('stats-title'))</script>
+        
+        
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/stats-1200.webp" srcset="assets/web/en/stats-600.webp 600w, assets/web/en/stats-900.webp 900w, assets/web/en/stats-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1414" height="2386" alt="Stats celebrating a month’s streak, today’s goal reached and the week’s listening" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--dark mode-studio feature--flank" id="studio" aria-labelledby="studio-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="studio-title" data-fit><span class="line">Layer <span class="accent">your voice</span></span> <span class="line">with music</span></h2>
+        <p class="lead">The Studio makes subliminals the way a professional would: your voice over music, rain or a binaural beat, in layers you shape clip by clip.</p><script>fit(document.getElementById('studio-title'))</script>
+      </div>
+      <dl class="facts facts--short facts--start"><div class="fact"><dt>Layers of clips</dt><dd>Each with its own start, pauses, repeats, fades, volume, side, speed and pitch.</dd></div><div class="fact"><dt>Built-in sounds</dt><dd>Rain, ocean, forest, fire and noise, and binaural beats from delta to gamma (headphones needed).</dd></div></dl>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/studio-1200.webp" srcset="assets/web/en/studio-600.webp 600w, assets/web/en/studio-900.webp 900w, assets/web/en/studio-1200.webp 1200w" sizes="(min-width: 720px) 520px, 92vw" width="1482" height="2476" alt="A subliminal project in Inscrybe’s Studio: its Voice, Music and Rain layers with their waveforms and volumes" loading="lazy" decoding="async"></figure>
+      <dl class="facts facts--short facts--end"><div class="fact"><dt>Silent voice</dt><dd>Moves a voice above hearing for silent subliminals, with a check before you save.</dd></div><div class="fact"><dt>Save to Library</dt><dd>As AAC, WAV, MP3 or Apple Lossless. Edit the project and save again to replace it.</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="feature feature--light mode-studio feature--split" id="voice" aria-labelledby="voice-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="voice-title" data-fit><span class="line"><span class="accent">Record or speak</span></span> <span class="line">your affirmations</span></h2>
+        <p class="lead">Record line by line with your script on screen and a count-in, and record any line again. Or let Speak turn a written script into a voice on your device, with your own pronunciations.</p><script>fit(document.getElementById('voice-title'))</script>
+        
+        <dl class="facts facts--short"><div class="fact"><dt>The Affirmation Library</dt><dd>Ready-made affirmations by category, in first person, second person or with a name.</dd></div><div class="fact"><dt>My Recordings</dt><dd>Every take you keep, on all your devices.</dd></div></dl>
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/voice-1200.webp" srcset="assets/web/en/voice-600.webp 600w, assets/web/en/voice-900.webp 900w, assets/web/en/voice-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1660" height="2362" alt="Recording a script line by line, with Speak the Script behind it" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--dark mode-studio feature--split feature--flip" id="how-hidden" aria-labelledby="how-hidden-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="how-hidden-title" data-fit><span class="line">Know <span class="accent">how hidden</span></span> <span class="line">your voice is</span></h2>
+        <p class="lead">How Hidden measures each voice against what plays over it and sets it to Buried, Hidden, Faint, Murmur or Clear in one tap. Can You Hear It? lets you check with your own ears.</p><script>fit(document.getElementById('how-hidden-title'))</script>
+        <img class="composition-light" src="assets/web/en/hidden-art-1000.webp" srcset="assets/web/en/hidden-art-500.webp 500w, assets/web/en/hidden-art-1000.webp 1000w" sizes="(min-width: 720px) 380px, 80vw" width="1000" height="720" alt="" loading="lazy" decoding="async">
+        <dl class="facts facts--short"><div class="fact"><dt>Never left on its own</dt><dd>At Faint and lower, the voice goes quiet where the background drops away.</dd></div><div class="fact"><dt>Every voice on its own</dt><dd>Each voice in a project is measured on its own and set to its own stop.</dd></div></dl>
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/hidden-1200.webp" srcset="assets/web/en/hidden-600.webp 600w, assets/web/en/hidden-900.webp 900w, assets/web/en/hidden-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1432" height="1937" alt="How Hidden on a project’s voice, set to Hidden" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="feature feature--light mode-player feature--split" id="privacy" aria-labelledby="privacy-title">
+    <div class="feature__inner">
+      <div class="feature__text">
+        <h2 id="privacy-title" data-fit><span class="line">Keep your subliminals</span> <span class="line"><span class="accent">private</span></span></h2>
+        <p class="lead">Discreet Mode shows made-up names and covers on the Lock Screen, in CarPlay, in widgets and on Apple Watch. Hidden is a collection with its own lock, and App Lock opens Inscrybe with Face ID, Touch ID or a PIN.</p><script>fit(document.getElementById('privacy-title'))</script>
+        
+        <dl class="facts facts--short"><div class="fact"><dt>No analytics</dt><dd>Nothing logs how you use the app. Crash reports never carry your tracks or scripts, and you can turn them off.</dd></div><div class="fact"><dt>iCloud sync</dt><dd>Your Library, projects and recordings on all your devices, in your own iCloud.</dd></div></dl>
+      </div>
+      <figure class="feature__visual"><img class="composition" src="assets/web/en/privacy-1200.webp" srcset="assets/web/en/privacy-600.webp 600w, assets/web/en/privacy-900.webp 900w, assets/web/en/privacy-1200.webp 1200w" sizes="(min-width: 720px) 46vw, 92vw" width="1380" height="2270" alt="The same Lock Screen twice: “Become a Millionaire (2x)” playing, and as Discreet Mode shows it, “Afterglow Avenue” by Lucia Wren" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+    <section class="closing" id="download" aria-labelledby="download-title">
+      <img class="closing__icon" src="assets/icon-256.png" alt="" width="128" height="128" loading="lazy">
+      <h2 id="download-title" class="closing__mark"><span class="wordmark">Inscrybe</span>
+      <svg class="mark-line" viewBox="0 0 600 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="ml-core" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FFAE55" stop-opacity="0"/>
+            <stop offset="0.22" stop-color="#FFAE55" stop-opacity="0.8"/>
+            <stop offset="0.6" stop-color="#FFF5E4"/>
+            <stop offset="0.88" stop-color="#FFAE55" stop-opacity="0.7"/>
+            <stop offset="1" stop-color="#FFAE55" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="ml-glow" x="-10%" y="-300%" width="120%" height="700%"><feGaussianBlur stdDeviation="6"/></filter>
+        </defs>
+        <path d="M4 46 C 180 44, 330 30, 596 12" fill="none" stroke="#FF7A3A" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round" filter="url(#ml-glow)"/>
+        <path d="M4 46 C 180 44, 330 30, 596 12" fill="none" stroke="url(#ml-core)" stroke-width="3" stroke-linecap="round"/>
+        <path class="mark-line__comet" d="M4 46 C 180 44, 330 30, 596 12" pathLength="100" fill="none" stroke="#FFF5E4" stroke-width="3.2" stroke-linecap="round"/>
+      </svg></h2>
+      <p class="lead">Inscrybe is coming to the App Store for iPhone, iPad and iPhone Duo, with CarPlay and Apple Watch.</p>
+      <div class="get get--cta"><span class="store-badge store-badge--soon" data-store="apple" aria-disabled="true"><img src="assets/app-store-badge.svg" alt="Coming soon to the App Store" height="56" width="168"></span><p class="get__label"><span class="get__soon">Coming soon</span><span class="get__devices">For iPhone, iPad and iPhone Duo</span></p></div>
+    </section>
+
+    <section class="support" id="support" aria-labelledby="support-title">
+      <div class="support__inner">
+        <div class="support__head">
+          <h2 id="support-title">Support</h2>
+          <p class="lead">Answers to what people ask most. For anything else, write to us.</p>
+          <div class="contact">
+            <h3>Write to us</h3>
+            <p>Tell us what you were doing when it happened and which iPhone or iPad you use.</p>
+            <button type="button" class="contact__copy" data-copy-email="inscrybe@armandojimenez.dev">
+              <span class="contact__email">inscrybe@armandojimenez.dev</span>
+              <span class="contact__action">Copy email address</span>
+            </button>
+            <p class="contact__app">From the app: Settings › Contact. With Include Device Information on, your message carries the details that help find a bug, never your tracks or scripts.</p>
+          </div>
+        </div>
+        <div class="faq">
+        <div class="faq__group">
+          <h3>Listening</h3>
+          <details class="faq__item"><summary>How do I bring my subliminals into Inscrybe?</summary><p>In the Library, tap + and choose Import Files, Import Folder or Import from a Link. You can also open an audio file in Inscrybe from Files, AirDrop or the Share sheet. A link has to point to the file itself; streaming services aren’t supported.</p></details>
+          <details class="faq__item"><summary>How do I repeat a track a set number of times?</summary><p>In the player, tap Repeat, then under Repeat This Track choose a number of times or Custom…. With Then Play Next on, the next track plays after the last time; otherwise playback stops there.</p></details>
+          <details class="faq__item"><summary>How does the sleep timer work?</summary><p>Tap the moon in the player and choose a length in minutes, End of Track, End of Folder or End of Playlist, depending on what’s playing. The sound fades out at the end.</p></details>
+          <details class="faq__item"><summary>Does the Apple Watch app play audio?</summary><p>No. It’s a remote for your iPhone: it shows what’s playing, controls it and the sleep timer, and opens your Library and playlists. Your iPhone plays the audio.</p></details>
+        </div>
+        <div class="faq__group">
+          <h3>The Studio</h3>
+          <details class="faq__item"><summary>What does How Hidden measure?</summary><p>How Hidden compares each voice in a project with the music and sounds over it and tells you where it sits: Clear, Murmur, Faint, Hidden or Buried. Tap a stop and the voice’s volume is set to reach it. It’s an estimate, so Can You Hear It? lets you check with your own ears.</p></details>
+          <details class="faq__item"><summary>How do I save a project as a track?</summary><p>In the project, tap Save to Library and choose the format. When you save it again after an edit, Inscrybe offers to replace that track, keeping its plays and its place in your Library.</p></details>
+        </div>
+        <div class="faq__group">
+          <h3>Privacy</h3>
+          <details class="faq__item"><summary>What does Discreet Mode change?</summary><p>A disguised track shows a made-up name and cover in Inscrybe and outside it: on the Lock Screen, in CarPlay, in widgets, on Apple Watch, in Siri and in the names of files you share. Turn it on in Settings › Privacy › Discreet Mode, for Private Items or Everything. Show Real Names shows the real ones in Inscrybe until you leave the app.</p></details>
+          <details class="faq__item"><summary>I forgot my App Lock PIN.</summary><p>On the lock screen, tap Forgot PIN? and get back in with your device’s passcode or your recovery code, whichever you chose when you set up App Lock.</p></details>
+          <details class="faq__item"><summary>What does Inscrybe collect?</summary><p>Inscrybe has no analytics: nothing logs how you use the app. If it crashes, a report is sent without your track names, your scripts or anything about you. Turn off Share Crash Reports in Settings › Privacy to send none.</p></details>
+        </div>
+        <div class="faq__group">
+          <h3>Your account</h3>
+          <details class="faq__item"><summary>How do I use Inscrybe on all my devices?</summary><p>Turn on Settings › iCloud Sync on each device signed in to the same Apple Account. Your Library, playlists, projects and recordings sync through your own iCloud, and audio downloads when it plays.</p></details>
+          <details class="faq__item"><summary>How do I restore my subscription on a new device?</summary><p>In Inscrybe, open Settings and tap Restore Purchases, signed in with the Apple Account you subscribed with.</p></details>
+          <details class="faq__item"><summary>How do I change or cancel my subscription?</summary><p>In Inscrybe, open Settings and tap Manage Subscription, or go to the Settings app, tap your name, then Subscriptions. Apple handles billing.</p></details>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="footer__home" href="" aria-label="Inscrybe home">
+        <img src="assets/icon-64.png" alt="" width="28" height="28" loading="lazy">
+        <span class="wordmark">Inscrybe</span>
+      </a>
+      <ul class="footer__links">
+        <li><a href="https://armandojimenez.dev/apps/inscrybe/terms.html">Terms of Service</a></li>
+        <li><a href="https://armandojimenez.dev/apps/inscrybe/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="es/" hreflang="es" lang="es">Español</a></li>
+      </ul>
+      <p class="footer__legal">© 2026 Believe PR. All rights reserved. <a href="https://armandojimenez.dev/">Made by Armando Jimenez</a></p>
+      <p class="footer__apple">Apple, the Apple logo, iPhone, iPad, Apple Watch, CarPlay and Siri are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+
+  <div class="snackbar" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+{
+ "locales": {
+  "en": {
+   "player": {
+    "widths": [
+     480,
+     720,
+     960
+    ],
+    "width": 1320,
+    "height": 2868
+   },
+   "images": {
+    "stats": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1414,
+     "height": 2386
+    },
+    "studio": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1482,
+     "height": 2476
+    },
+    "voice": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1660,
+     "height": 2362
+    },
+    "hidden": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1432,
+     "height": 1937
+    },
+    "hidden-art": {
+     "widths": [
+      500,
+      1000
+     ],
+     "width": 1000,
+     "height": 720
+    },
+    "privacy": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1380,
+     "height": 2270
+    },
+    "library": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1612,
+     "height": 2386
+    },
+    "everywhere": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1525,
+     "height": 2227
+    },
+    "sleep": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1450,
+     "height": 2576
+    },
+    "visuals": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1657,
+     "height": 2267
+    }
+   },
+   "plays": {
+    "widths": [
+     360,
+     720
+    ],
+    "width": 876,
+    "height": 205,
+    "x": 50.076,
+    "y": 65.272,
+    "w": 34.862
+   }
+  },
+  "es": {
+   "player": {
+    "widths": [
+     480,
+     720,
+     960
+    ],
+    "width": 1320,
+    "height": 2868
+   },
+   "images": {
+    "library": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1612,
+     "height": 2386
+    },
+    "sleep": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1422,
+     "height": 2593
+    },
+    "visuals": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1657,
+     "height": 2267
+    },
+    "stats": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1414,
+     "height": 2386
+    },
+    "studio": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1482,
+     "height": 2476
+    },
+    "voice": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1660,
+     "height": 2362
+    },
+    "hidden": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1432,
+     "height": 1937
+    },
+    "hidden-art": {
+     "widths": [
+      500,
+      1000
+     ],
+     "width": 1000,
+     "height": 731
+    },
+    "privacy": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1380,
+     "height": 2270
+    },
+    "everywhere": {
+     "widths": [
+      600,
+      900,
+      1200
+     ],
+     "width": 1525,
+     "height": 2227
+    }
+   },
+   "plays": {
+    "widths": [
+     360,
+     720
+    ],
+    "width": 882,
+    "height": 123,
+    "x": 50.076,
+    "y": 65.272,
+    "w": 58.462
+   }
+  }
+ }
+}
