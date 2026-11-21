@@ -31,7 +31,7 @@ export default {
     soonShort: 'Próximamente',
     live: 'Descárgalo en el App Store',
     playSoon: 'Próximamente en Google Play',
-    playLive: 'Disponible en Google Play',
+    playLive: 'Descargar en Google Play',
   },
 
   hero: {

@@ -66,6 +66,8 @@ copy(path.join(HERE, 'site/light.js'), path.join(SITE, 'light.js'));
 copy(path.join(SKILL, 'assets/scaffold/behavior.js'), path.join(SITE, 'behavior.js'));
 copy(path.join(SKILL, 'assets/app-store-badge.svg'), path.join(SITE, 'assets/app-store-badge.svg'));
 copy(path.join(SKILL, 'assets/google-play-badge.svg'), path.join(SITE, 'assets/google-play-badge.svg'));
+// Google's Spanish badge (play.google.com/intl/es-419/badges: "Disponible en Google Play"), its clear margin trimmed
+copy(path.join(HERE, 'site/google-play-badge-es.png'), path.join(SITE, 'assets/google-play-badge-es.png'));
 copy(path.join(HERE, 'site/app-store-badge-es.svg'), path.join(SITE, 'assets/app-store-badge-es.svg'));
 fs.writeFileSync(path.join(SITE, '.nojekyll'), '');
 
