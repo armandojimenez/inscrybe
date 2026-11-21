@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "generated": "2026-10-23T22:01:40.149Z",
+  "app": {
+    "name": "Inscrybe",
+    "slug": "inscrybe",
+    "concept": "A subliminal player and a professional subliminal studio in one app.",
+    "longPitch": "Inscrybe plays the subliminals you already have, from your own files, with folders, playlists, repeat counts and a sleep timer, on the Lock Screen, in the car and on the Apple Watch. Its Studio makes your own the way a serious maker would: layers of your voice, a spoken script or your own recordings over music, rain or a binaural beat, with every voice's level measured so you know how hidden it is.",
+    "contactEmail": "inscrybe@armandojimenez.dev",
+    "termsUrl": "https://armandojimenez.dev/apps/inscrybe/terms.html",
+    "privacyPolicyUrl": "https://armandojimenez.dev/apps/inscrybe/privacy-policy.html",
+    "supportUrl": "",
+    "copyright": "2026 © Believe PR. All Rights Reserved",
+    "ascAppId": "6823235991",
+    "packageName": null
+  },
+  "matrix": {
+    "platforms": [
+      "ios"
+    ],
+    "locales": [
+      "en",
+      "es"
+    ],
+    "devices": [
+      "phone",
+      "tablet",
+      "foldable",
+      "watch"
+    ]
+  },
+  "positioning": {
+    "valueProps": [
+      "Play the subliminals you have and make your own, in one app",
+      "A player made for subliminals: repeat a track a set number of times, play a folder or playlist in your order, sleep at the end of a track or folder, and listen on the Lock Screen, in CarPlay and on the Apple Watch",
+      "A professional Studio: layers of your voice, a spoken script or your recordings over music, rain or a binaural beat, every voice's level measured so you know how hidden it is",
+      "Privacy that holds outside the app: made-up names and covers on the Lock Screen, in the car and on the watch, a Hidden collection with its own lock, App Lock",
+      "No analytics: nothing logs how you use the app; crash reports are scrubbed and can be turned off"
+    ],
+    "audience": {
+      "primary": "Everyone who listens to subliminals and wants to make their own.",
+      "segments": [
+        "People who listen to subliminals every day, for manifesting, shifting or anything else they listen for",
+        "People who make their own subliminals with their own affirmations, without audio software",
+        "People who listen for long sessions: several subliminals at once, hours and streaks, in the car and on the watch",
+        "People new to subliminals who want an easy start (the Affirmation Library, Speak)"
+      ],
+      "painPoints": [
+        "Generic music players lose subliminals among songs and can't loop one a set number of times or stop at the end of a folder",
+        "Subliminal apps push their own catalog or feed and treat the files you already have as an afterthought",
+        "Making a subliminal means a desktop audio editor, or an app that gives you one \"subliminal volume\" with no idea how hidden the voice really is",
+        "Subliminal titles show on the Lock Screen, in the car and on a shared iPad",
+        "Listening apps track you"
+      ],
+      "ageRange": "General audience (no age gate)",
+      "note": "No ranking (the owner, 2026-10-22: \"this is for everyone who listen to subliminals and want to create their own\"). The segments are kinds of use, not an order."
+    },
+    "features": [
+      {
+        "name": "Your own subliminals, any format",
+        "benefit": "Everything you already listen to plays in one place, whatever it came as",
+        "detail": "Import files, whole folders with their folders inside, ZIPs, links to audio files, and videos (their audio). Native formats plus Ogg Vorbis, WebM, MKV and WMA through FFmpeg. Duplicates found by content."
+      },
+      {
+        "name": "Folders and playlists in your order",
+        "benefit": "Folders and playlists play in the order you set, every time",
+        "detail": "A Library of folders and tracks in your order or sorted per folder; playlists with a play count per entry; Favorites; Recently Played."
+      },
+      {
+        "name": "Repeat a set number of times",
+        "benefit": "Loop a subliminal exactly as many times as you want, then go on or stop",
+        "detail": "Repeat Track with a count and Then Play Next; Repeat All on the folder or playlist; Shuffle; Up Next with counts for this time only."
+      },
+      {
+        "name": "Sleep timer",
+        "benefit": "Fall asleep listening; it fades out when you choose",
+        "detail": "Minutes, End of Track, End of Folder or Playlist; a fade; never hands the night to another app."
+      },
+      {
+        "name": "Volume boost and speed",
+        "benefit": "Quiet recordings play loud enough, at the speed you like",
+        "detail": "Volume to 150%, speed 0.5× to 2×, the same from track to track."
+      },
+      {
+        "name": "Mixes",
+        "benefit": "Listen to several subliminals at once as one item",
+        "detail": "Each track with its own volume and side; a length to follow; saved as one track if you want."
+      },
+      {
+        "name": "Background Sound",
+        "benefit": "Put rain, ocean or a beat under anything you play",
+        "detail": "Built-in ambient sounds and binaural beats, or a track from your Library, at its own volume."
+      },
+      {
+        "name": "Lock Screen, widgets, CarPlay and Apple Watch",
+        "benefit": "Control your subliminals wherever you are, without opening the app",
+        "detail": "Now Playing on the Lock Screen and Control Center, Home Screen and Lock Screen widgets, a Control Center control, CarPlay (Recent, Library, Playlists, Now Playing with speed and repeat), an Apple Watch remote with complications, Siri and Shortcuts, AirPlay."
+      },
+      {
+        "name": "Listening stats",
+        "benefit": "See your hours, keep a streak and reach a daily goal",
+        "detail": "Today, a goal and a streak, the week, months and years, records, and when you listen."
+      },
+      {
+        "name": "The Studio",
+        "benefit": "Make a subliminal the way a professional would, on your phone",
+        "detail": "Layers of clips with start, pauses, passes, fades, volume, side, speed and pitch; voices stacked; undo; mixes up to 12 hours; saved to the Library as AAC, WAV, MP3 or Apple Lossless."
+      },
+      {
+        "name": "How Hidden",
+        "benefit": "Know how hidden each voice is, and set it in one tap",
+        "detail": "Measured against what plays over it, by speech band and hum; stops Buried, Hidden, Faint, Murmur and Clear; the voice gated where nothing covers it; Can You Hear It? to check with your ears."
+      },
+      {
+        "name": "Record your voice",
+        "benefit": "Your affirmations in your own voice, recorded line by line",
+        "detail": "The script in front of you, a count-in, pause, redo a line; takes joined with the room between lines; My Recordings synced across devices."
+      },
+      {
+        "name": "Speak",
+        "benefit": "Turn a written script into a voice without recording",
+        "detail": "On-device voices in English and Spanish, your own pronunciations, re-spoken when the script changes."
+      },
+      {
+        "name": "Affirmation Library",
+        "benefit": "Start a script from ready-made affirmations",
+        "detail": "726 affirmations in 26 categories, in English and Spanish, in I, You or a name's form; favorites."
+      },
+      {
+        "name": "Silent voice",
+        "benefit": "A voice above hearing, for silent subliminals done properly",
+        "detail": "Shifted into 17.5–19.8 kHz; a Silent check with its spectrum and Hear It; saved only in formats that hold it."
+      },
+      {
+        "name": "Built-in sounds and binaural beats",
+        "benefit": "Background for your subliminals without finding files",
+        "detail": "Rain, ocean, forest, fire, white, pink and brown noise; binaural beats at 2, 6, 10, 20 and 40 Hz (headphones needed); named by band, never by an effect."
+      },
+      {
+        "name": "Visuals",
+        "benefit": "See your affirmations while you listen, or save them as a video",
+        "detail": "Flashed within photosensitivity limits or shown steadily, over a look, your cover or a slideshow of your pictures; a video saved to Photos."
+      },
+      {
+        "name": "Discreet Mode and Hidden",
+        "benefit": "What you listen to stays private, even on the Lock Screen and in the car",
+        "detail": "Made-up names and covers outside the app (Lock Screen, CarPlay, widgets, the watch, Siri, shared files); Replace Words; a Hidden collection with its own lock."
+      },
+      {
+        "name": "App Lock",
+        "benefit": "Only you open Inscrybe",
+        "detail": "Face ID, Touch ID or a PIN, with a recovery way back in."
+      },
+      {
+        "name": "iCloud sync",
+        "benefit": "Your Library, projects and recordings on all your devices",
+        "detail": "CloudKit and iCloud Drive; audio downloaded when it plays."
+      },
+      {
+        "name": "Themes and app icons",
+        "benefit": "Choose how the app looks",
+        "detail": "Six themes in dark and light, alternate app icons."
+      },
+      {
+        "name": "No analytics",
+        "benefit": "Nothing logs how you use the app",
+        "detail": "No analytics SDK or events; scrubbed crash reports only, behind Share Crash Reports."
+      }
+    ],
+    "screensNarrative": [
+      {
+        "screen": "The Library: folders and tracks in your order",
+        "claim": "All your subliminals, organized your way"
+      },
+      {
+        "screen": "The player: cover, repeat count, the row of controls",
+        "claim": "Loop a subliminal exactly as many times as you want"
+      },
+      {
+        "screen": "Sleep timer and Up Next",
+        "claim": "Fall asleep listening; it stops when you choose"
+      },
+      {
+        "screen": "The Studio editor: voice, music and rain lanes",
+        "claim": "Make subliminals like a professional"
+      },
+      {
+        "screen": "How Hidden: the stops and the measured voice",
+        "claim": "Know how hidden every voice is"
+      },
+      {
+        "screen": "Record line by line / Speak / the Affirmation Library",
+        "claim": "Your voice, or a spoken script, from 726 affirmations"
+      },
+      {
+        "screen": "Discreet Mode: the same Library real and disguised",
+        "claim": "What you see, and what they see"
+      },
+      {
+        "screen": "CarPlay, the Apple Watch, widgets, the Lock Screen",
+        "claim": "Your subliminals wherever you are"
+      },
+      {
+        "screen": "Visuals",
+        "claim": "See your affirmations while you listen"
+      },
+      {
+        "screen": "Stats",
+        "claim": "Your hours and your streak"
+      }
+    ]
+  },
+  "brand": {
+    "tone": "Plain, direct and serious: say what the app does in the community's own words; professional, never hype, never soft or poetic",
+    "voice": [
+      "direct",
+      "concrete",
+      "professional",
+      "confident without hype"
+    ],
+    "doSay": [
+      "subliminals",
+      "your own voice",
+      "tracks (never songs)",
+      "the Studio",
+      "How Hidden",
+      "Speak",
+      "silent voice",
+      "Inscrybe Deep (the subscription's name)"
+    ],
+    "dontSay": [
+      "Premium",
+      "songs (for what people play)",
+      "healing, proven, results in N days, frequencies that heal",
+      "research, studies, placebo, \"no effect\" (no skepticism about subliminals)",
+      "an effect for a binaural beat (sleep, focus, calm): a beat is named by band and frequency (App Review 1.4.1)",
+      "Solfeggio",
+      "calm, kind, gentle, safe space (soft talk)",
+      "the only app (for anything another app also offers)",
+      "AI talk (the owner, 17.1: \"I dont want Ai talk like beautifully keps, stuff, yours. Calm talk, like safe space\"): beautifully, kept, yours / make it yours, routine, ritual, practice, journey, unlock, elevate, seamless, effortless, whisper (as our word); in Spanish the same: hermosamente, guardado, tuyo / hazlo tuyo, rutina, ritual, práctica, viaje, desbloquea, eleva, sin esfuerzo, calma, espacio seguro, suave, canciones (for what people play)",
+      "which features are free and which need Inscrybe Deep (the owner, 17.2: \"dont mention content as free/premium\"); the subscription is named with its price and trial only where Apple requires it",
+      "app icons, themes, dark mode or light mode (the owner, 17.2): not pitched",
+      "safe, calm and AI-sounding talk (the owner, 17.2: \"no AI safe calm talk\")",
+      "em dashes (—) and en dashes (–) as punctuation (the owner, 17.2): a comma, a colon or a new sentence instead",
+      "specific amounts (the owner, 17.3: \"lets not mention specific amounts, for example affirmations\"): no counts or limits such as the number of affirmations or categories, repeats, volume, speed, hours or frequencies; a binaural beat is named by its band"
+    ],
+    "avoid": [],
+    "mustSayLines": [],
+    "themeColors": [
+      "#08061A",
+      "#D4A855",
+      "#7B5FBD",
+      "#F5F5F7"
+    ]
+  },
+  "copy": {
+    "es": {
+      "market": "es-es",
+      "store": "apple",
+      "promo": "Reproduce tus subliminales y crea tus propios audios midiendo lo oculta que está cada voz. Repite una pista las veces que quieras y contrólala desde el Apple Watch.",
+      "description": "Inscrybe reproduce los subliminales que ya tienes. Con su Estudio creas tus propios audios como lo haría un profesional: tu voz sobre música, lluvia o un tono binaural, con el nivel de cada voz medido para que sepas lo oculta que está.\n\nReproduce tus subliminales\n• Importa archivos, carpetas completas, ZIP, vídeos y enlaces: MP3, AAC, FLAC, WAV, Opus, Ogg, WebM, MKV, WMA y más.\n• Carpetas y listas de reproducción en el orden que decidas, y en una lista cada pista puede sonar las veces que elijas.\n• Repite una pista las veces que elijas y luego pasa a la siguiente o detente.\n• Temporizador por minutos, al terminar la pista, la carpeta o la lista, con desvanecimiento.\n• Sube el volumen de las grabaciones que suenan bajo, y cambia la velocidad.\n• Las Mezclas reproducen varias pistas a la vez como una sola, cada una con su volumen y su lado.\n• El Sonido de fondo pone lluvia, mar o un tono binaural debajo de lo que escuches.\n• Las Estadísticas muestran tus horas, una meta diaria y tu racha.\n\nEscucha donde quieras\nLa pantalla de bloqueo, el Centro de control, los widgets, CarPlay, Siri y Atajos, AirPlay, y un mando a distancia en el Apple Watch con complicaciones. Las pistas largas se reanudan donde las dejaste.\n\nCrea en el Estudio\n• Capas de clips, cada uno con su inicio, pausas, repeticiones, desvanecimientos, volumen, lado, velocidad y tono.\n• Nivel de voz mide cada voz contra lo que suena encima y la ajusta con un solo toque: Enterrada, Oculta, Tenue, Murmullo o Nítida. Con ¿Puedes oírlo? lo compruebas con tus oídos.\n• Graba línea por línea con tu guion en pantalla y una cuenta regresiva, y vuelve a grabar cualquier línea.\n• Generar voz lee en voz alta un guion escrito con las voces de tu dispositivo y tus pronunciaciones.\n• La Biblioteca de afirmaciones tiene afirmaciones listas por categoría, en primera persona, en segunda o con un nombre.\n• La Voz silenciosa sube una voz por encima de lo audible para subliminales silenciosos, con una comprobación antes de guardar.\n• Lluvia, mar, bosque, fuego y ruido integrados, y tonos binaurales de delta a gamma (se necesitan auriculares).\n• Guarda los proyectos en tu biblioteca como AAC, WAV, MP3 o Apple Lossless.\n\nMira tus afirmaciones\nLos Visuales muestran tus afirmaciones en pantalla mientras suena una pista, en destellos dentro de los límites de fotosensibilidad o fijas, sobre tu portada o una presentación con tus fotos. Guárdalos como vídeo en Fotos.\n\nPrivacidad\n• El Modo discreto muestra nombres y portadas inventados en la pantalla de bloqueo, en CarPlay, en los widgets y en el Apple Watch.\n• Ocultos es una colección con su propio bloqueo.\n• El Bloqueo de la app abre Inscrybe con Face ID, Touch ID o un PIN.\n• Sin analíticas: nada registra cómo usas la app.\n• Con iCloud, tu biblioteca, tus proyectos y tus grabaciones están en todos tus dispositivos.\n\nReproduce lo que escuches: afirmaciones, decretos, campos mórficos, boosters, subliminales silenciosos y tonos binaurales.\n\nCondiciones de servicio: https://armandojimenez.dev/apps/inscrybe/terms-es.html\nPolítica de privacidad: https://armandojimenez.dev/apps/inscrybe/privacy-policy-es.html"
+    },
+    "en": {
+      "market": "us-en",
+      "store": "apple",
+      "promo": "Play the subliminals you have and make your own, each voice measured so you know how hidden it is. Loop a track as many times as you want and control it from Apple Watch.",
+      "description": "Inscrybe plays the subliminals you already have. Its Studio lets you make your own the way a professional would: your voice over music, rain or a binaural beat, with every voice's level measured so you know how hidden it is.\n\nPlay your subliminals\n• Bring in files, whole folders, ZIPs, videos and links: MP3, AAC, FLAC, WAV, Opus, Ogg, WebM, MKV, WMA and more.\n• Folders and playlists play in the order you set, and each playlist entry can have its own play count.\n• Repeat a track as many times as you set, then go on to the next or stop.\n• Sleep timer by minutes, at the end of a track, folder or playlist, with a fade.\n• Volume boost for quiet recordings, and speed slower or faster.\n• Mixes play several tracks at once as one, each at its own volume and side.\n• Background Sound puts rain, ocean or a binaural beat under anything you play.\n• Stats show your hours, a daily goal and your streak.\n\nWherever you listen\nThe Lock Screen, Control Center, widgets, CarPlay, Siri and Shortcuts, AirPlay, and an Apple Watch remote with complications. Long tracks resume where you stopped.\n\nMake your own in the Studio\n• Layers of clips, each with its own start, pauses, repeats, fades, volume, side, speed and pitch.\n• How Hidden measures each voice against what plays over it and sets it to Buried, Hidden, Faint, Murmur or Clear in one tap. Can You Hear It? lets you check with your own ears.\n• Record line by line with your script on screen and a count-in, and record any line again.\n• Speak turns a written script into a voice on your device, with your own pronunciations.\n• The Affirmation Library has ready-made affirmations by category, in first person, second person or with a name.\n• Silent voice moves a voice above hearing for silent subliminals, with a check before you save.\n• Built-in rain, ocean, forest, fire and noise, and binaural beats from delta to gamma (headphones needed).\n• Save projects to your Library as AAC, WAV, MP3 or Apple Lossless.\n\nSee your affirmations\nVisuals show your affirmations on screen while a track plays, flashed within photosensitivity limits or steady, over your cover or a slideshow of your own pictures. Save them as a video to Photos.\n\nPrivacy\n• Discreet Mode shows made-up names and covers on the Lock Screen, in CarPlay, in widgets and on Apple Watch.\n• Hidden is a collection with its own lock.\n• App Lock opens Inscrybe with Face ID, Touch ID or a PIN.\n• No analytics: nothing logs how you use the app.\n• iCloud sync brings your Library, projects and recordings to all your devices.\n\nPlay whatever you listen to: affirmations, morphic fields, boosters, silent subliminals and binaural beats.\n\nTerms of Service: https://armandojimenez.dev/apps/inscrybe/terms.html\nPrivacy Policy: https://armandojimenez.dev/apps/inscrybe/privacy-policy.html"
+    }
+  },
+  "screenshots": {
+    "source": null,
+    "captioned": false,
+    "sourceTarget": null,
+    "available": false,
+    "byLocale": {
+      "en": [],
+      "es": []
+    },
+    "paths": {
+      "en": [],
+      "es": []
+    },
+    "note": "Raw app screenshots — used as-is (owner captures). The page composes the device bezel; do not edit the screenshots themselves."
+  },
+  "storeUrls": {
+    "en": {
+      "appStoreUrl": "https://apps.apple.com/app/id6823235991",
+      "playStoreUrl": null,
+      "missing": []
+    },
+    "es": {
+      "appStoreUrl": "https://apps.apple.com/app/id6823235991",
+      "playStoreUrl": null,
+      "missing": []
+    }
+  },
+  "social": {
+    "featureGraphic": null,
+    "ogImage": null,
+    "appleItunesApp": "app-id=6823235991",
+    "note": "og:url + og:image absolute URLs are finalized at deploy to the live origin. If featureGraphic is null, omit og:image (leave empty)."
+  },
+  "deploy": {
+    "repoSlug": "inscrybe",
+    "repoNameDefault": "inscrybe",
+    "localDir": "/Users/armandojimenez/development/landings/inscrybe_landing",
+    "liveUrlGuess": "https://armandojimenez.dev/inscrybe/",
+    "note": "liveUrlGuess is the project-page URL under the owner user-domain. Confirm at deploy; write the real one back to dossier.app.marketingUrl + the P5 ledger artifact."
+  },
+  "domContract": {
+    "lang": ".lang-en / .lang-es paired elements; .lang-toggle__btn[data-lang]; localStorage `<slug>-lang`; ?lang= override; html[lang] updated by assets behavior.js",
+    "contact": "[data-copy-email=\"<contactEmail>\"] click → navigator.clipboard.writeText → show .snackbar \"Copied <email>\"",
+    "badges": "<a class=\"store-badge\" data-store=\"apple|google\" …> from badges.mjs; Apple → store-badge--soon when no ASC id"
+  }
+}

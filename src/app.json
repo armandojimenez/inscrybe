@@ -1,0 +1,6 @@
+{
+  "ascAppId": "6823235991",
+  "packageName": "dev.armandojimenez.inscrybe",
+  "contactEmail": "inscrybe@armandojimenez.dev",
+  "note": "The stores' ids and the contact address, from the iOS hub's ledger and dossier (ascAppId, contactEmail) and the Android hub's (packageName): the generator reads nothing from either app's repository"
+}
