@@ -24,17 +24,25 @@ const APP = JSON.parse(fs.readFileSync(path.join(HERE, 'app.json'), 'utf8'));
 // the badge links nowhere, "Coming soon" sits beside it, the closing says it's coming. Out: the badge links to its page,
 // the closing says it's on the App Store, Safari shows the Smart App Banner and the structured data gets the download
 // link. So once version 1.0 is out (17.10), building again and pushing the landing is the whole change. `--on-sale` or
-// `--not-on-sale` decides instead (a lookup that can't be reached keeps "Coming soon" and says so).
+// `--not-on-sale` decides instead.
+// A lookup that doesn't say either way (no answer, a server error, a redirect to a consent page) stops the build:
+// building "Coming soon" over a store page that may be live would take the badge's link off the page.
+function undecided(store, why, flags) {
+  console.error(`✗ the ${store} lookup didn't say (${why}): build again, or decide with ${flags}`);
+  process.exit(1);
+}
 async function onSale(id) {
   if (process.argv.includes('--on-sale')) return true;
   if (process.argv.includes('--not-on-sale')) return false;
+  const flags = '--on-sale or --not-on-sale';
+  let r, body;
   try {
-    const r = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`, { signal: AbortSignal.timeout(8000) });
-    return (await r.json()).resultCount > 0;
-  } catch (err) {
-    console.warn(`⚠ the App Store lookup failed (${err.message}): building with "Coming soon"`);
-    return false;
-  }
+    r = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`, { signal: AbortSignal.timeout(8000) });
+  } catch (err) { undecided('App Store', err.message, flags); }
+  if (!r.ok) undecided('App Store', `HTTP ${r.status}`, flags);
+  try { body = await r.json(); } catch { undecided('App Store', 'not JSON', flags); }
+  if (typeof body.resultCount !== 'number') undecided('App Store', 'no resultCount', flags);
+  return body.resultCount > 0;
 }
 const ON_SALE = await onSale(APP.ascAppId);
 console.log(ON_SALE ? '✓ Inscrybe is on the App Store: the badge links to it' : '· Inscrybe is not on sale yet: "Coming soon"');
@@ -46,13 +54,14 @@ const PLAY_URL = `https://play.google.com/store/apps/details?id=${APP.packageNam
 async function onPlay() {
   if (process.argv.includes('--on-play')) return true;
   if (process.argv.includes('--not-on-play')) return false;
+  const flags = '--on-play or --not-on-play';
+  let r;
   try {
-    const r = await fetch(`${PLAY_URL}&hl=en`, { signal: AbortSignal.timeout(8000), redirect: 'manual' });
-    return r.status === 200;
-  } catch (err) {
-    console.warn(`⚠ the Google Play lookup failed (${err.message}): building with "Coming soon"`);
-    return false;
-  }
+    r = await fetch(`${PLAY_URL}&hl=en`, { signal: AbortSignal.timeout(8000), redirect: 'manual' });
+  } catch (err) { undecided('Google Play', err.message, flags); }
+  if (r.status === 200) return true;
+  if (r.status === 404) return false;
+  undecided('Google Play', `HTTP ${r.status}`, flags);
 }
 const ON_PLAY = await onPlay();
 console.log(ON_PLAY ? '✓ Inscrybe is on Google Play: its badge links to it' : '· Inscrybe is not on Google Play yet: "Coming soon"');
@@ -66,7 +75,7 @@ copy(path.join(HERE, 'site/light.js'), path.join(SITE, 'light.js'));
 copy(path.join(SKILL, 'assets/scaffold/behavior.js'), path.join(SITE, 'behavior.js'));
 copy(path.join(SKILL, 'assets/app-store-badge.svg'), path.join(SITE, 'assets/app-store-badge.svg'));
 copy(path.join(SKILL, 'assets/google-play-badge.svg'), path.join(SITE, 'assets/google-play-badge.svg'));
-// Google's Spanish badge (play.google.com/intl/es-419/badges: "Disponible en Google Play"), its clear margin trimmed
+// Google's Spanish badge (play.google.com/intl/es-419/badges: "Descargar en Google Play"), its clear margin trimmed
 copy(path.join(HERE, 'site/google-play-badge-es.png'), path.join(SITE, 'assets/google-play-badge-es.png'));
 copy(path.join(HERE, 'site/app-store-badge-es.svg'), path.join(SITE, 'assets/app-store-badge-es.svg'));
 fs.writeFileSync(path.join(SITE, '.nojekyll'), '');

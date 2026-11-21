@@ -35,16 +35,24 @@ node ~/.claude/skills/app-landing-page/scripts/validate-landing.mjs . --pages=en
 The captures and the tool's exports are deleted once the site is built (CLAUDE.md › Mandatory phase cleanup); the site's
 assets are the kept copy.
 
-## When Inscrybe is accepted and on sale
+## When a store has Inscrybe
 
-The page says "Coming soon" until then, and `build.mjs` decides it by asking the App Store's public lookup
-(`itunes.apple.com/lookup?id=6823235991`) at build time. The day version 1.0 is out:
+The page says "Coming soon" beside a store until Inscrybe is there, and `build.mjs` decides it at build time by asking
+each store: the App Store's public lookup (`itunes.apple.com/lookup?id=6823235991`) and Google Play's listing page
+(`play.google.com/store/apps/details?id=dev.armandojimenez.inscrybe`, a 404 until the app is published). A lookup that
+doesn't say either way (no answer, a server error, a redirect to a consent page) stops the build with the reason, so a
+build never takes a live badge's link off the page; build again, or decide with the flags below.
+
+- **The App Store** (since 2026-10-31, commit 9d612f5): the badge links to the App Store, the closing line says Inscrybe
+  is on the App Store, Safari shows the Smart App Banner and the structured data has the download link.
+  `--on-sale` / `--not-on-sale` override the lookup.
+- **Google Play** (Android's 16.5, once its production release is live): one build more turns Google's badge into a
+  link to the listing, "Coming soon" goes and the structured data gets the Play link. `--on-play` / `--not-on-play`
+  override the lookup.
 
 ```sh
-cd ~/development/landings/inscrybe_landing && node src/build.mjs     # prints "Inscrybe is on the App Store"
-git commit -am "The App Store badge links to Inscrybe" && git push
+cd ~/development/landings/inscrybe_landing && node src/build.mjs     # prints "Inscrybe is on Google Play: its badge links to it"
+git commit -am "The Google Play badge links to Inscrybe" && git push
 ```
 
-That one build changes, in both languages: the badge becomes a link to the App Store, "Coming soon" goes from beside it
-(the devices stay), the closing line says Inscrybe is on the App Store, Safari shows the Smart App Banner, and the
-structured data gets the download link. `--on-sale` / `--not-on-sale` override the lookup. Then check both pages live.
+Then check both pages live.

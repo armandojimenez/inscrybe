@@ -407,3 +407,13 @@ h1 .line, h2 .line, .closing__line .line { display: block; }
 .get--cta { align-items: center; }
 .get--cta .get__badges { justify-content: center; }
 .get--cta .get__label { text-align: center; align-items: center; }
+
+/* Both badges in one row down to the smallest phones (16.4's review: 48 px pairs wrapped from 361 to 389 px, 40 px
+   ones below 322): a step smaller where they'd wrap, never under 40 px, Google's never smaller than Apple's */
+@media (max-width: 400px) {
+  .store-badge img, .get--cta .store-badge img { height: 44px; }
+}
+@media (max-width: 360px) {
+  .store-badge img, .get--cta .store-badge img { height: 40px; }
+  .get__badges { gap: 8px; }
+}

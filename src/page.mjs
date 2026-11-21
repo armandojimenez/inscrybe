@@ -23,7 +23,7 @@ function badge(store, live, url, file, alt, h, ctx) {
   const img = `<img src="${ctx.root}assets/${file}" alt="${esc(alt)}" height="${h}" width="${Math.round(h * 135 / 40)}">`;
   return live
     ? `<a class="store-badge" data-store="${store}" href="${url}" target="_blank" rel="noopener">${img}</a>`
-    : `<span class="store-badge store-badge--soon" data-store="${store}" aria-disabled="true">${img}</span>`;
+    : `<span class="store-badge store-badge--soon" data-store="${store}">${img}</span>`;
 }
 
 /** The two stores' badges and what they're for: a store Inscrybe isn't in yet says "Coming soon" (naming it when the
@@ -32,10 +32,11 @@ function get(s, ctx, size = 'hero') {
   const h = size === 'cta' ? 56 : 48;
   // Apple's badge in the page's language (its marketing tools: the Spanish one says "Descárgalo en el App Store")
   const appleFile = s.locale === 'es' ? 'app-store-badge-es.svg' : 'app-store-badge.svg';
-  const apple = badge('apple', ctx.live, ctx.appStoreUrl, appleFile, ctx.live ? s.badge.live : s.badge.soon, h, ctx);
-  // Google's badge in the page's language too (its badge maker: the Spanish one says "Disponible en Google Play")
+  const apple = badge('apple', ctx.live, ctx.appStoreUrl, appleFile, ctx.live ? s.badge.live : 'App Store', h, ctx);
+  // Google's badge in the page's language too (its badge maker: the Spanish one says "Descargar en Google Play");
+  // a store Inscrybe isn't in yet is named alone, the label beside saying "Coming soon" (read once)
   const googleFile = s.locale === 'es' ? 'google-play-badge-es.png' : 'google-play-badge.svg';
-  const google = badge('google', ctx.playLive, ctx.playUrl, googleFile, ctx.playLive ? s.badge.playLive : s.badge.playSoon, h, ctx);
+  const google = badge('google', ctx.playLive, ctx.playUrl, googleFile, ctx.playLive ? s.badge.playLive : 'Google Play', h, ctx);
   const soonWords = !ctx.live && !ctx.playLive ? s.badge.soonShort : !ctx.live ? s.badge.soon : !ctx.playLive ? s.badge.playSoon : '';
   const soon = soonWords ? `<span class="get__soon">${esc(soonWords)}</span>` : '';
   return `<div class="get get--${size}"><div class="get__badges">${apple}${google}</div><p class="get__label">${soon}<span class="get__devices">${esc(s.hero.devices)}</span></p></div>`;
