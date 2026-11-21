@@ -39,6 +39,24 @@ async function onSale(id) {
 const ON_SALE = await onSale(APP.ascAppId);
 console.log(ON_SALE ? '✓ Inscrybe is on the App Store: the badge links to it' : '· Inscrybe is not on sale yet: "Coming soon"');
 
+// Google Play the same way (Android's 16.4): its listing's public page answers once Inscrybe is published there (a 404
+// before), so 16.5's production release and one build more turn the Play badge into a link. `--on-play` or `--not-on-play`
+// decides instead.
+const PLAY_URL = `https://play.google.com/store/apps/details?id=${APP.packageName}`;
+async function onPlay() {
+  if (process.argv.includes('--on-play')) return true;
+  if (process.argv.includes('--not-on-play')) return false;
+  try {
+    const r = await fetch(`${PLAY_URL}&hl=en`, { signal: AbortSignal.timeout(8000), redirect: 'manual' });
+    return r.status === 200;
+  } catch (err) {
+    console.warn(`⚠ the Google Play lookup failed (${err.message}): building with "Coming soon"`);
+    return false;
+  }
+}
+const ON_PLAY = await onPlay();
+console.log(ON_PLAY ? '✓ Inscrybe is on Google Play: its badge links to it' : '· Inscrybe is not on Google Play yet: "Coming soon"');
+
 const manifest = JSON.parse(fs.readFileSync(path.join(SITE, 'assets/manifest.json'), 'utf8'));
 const copy = (from, to) => { fs.mkdirSync(path.dirname(to), { recursive: true }); fs.copyFileSync(from, to); };
 const hash = (file) => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex').slice(0, 10);
@@ -47,6 +65,7 @@ copy(path.join(HERE, 'site/style.css'), path.join(SITE, 'style.css'));
 copy(path.join(HERE, 'site/light.js'), path.join(SITE, 'light.js'));
 copy(path.join(SKILL, 'assets/scaffold/behavior.js'), path.join(SITE, 'behavior.js'));
 copy(path.join(SKILL, 'assets/app-store-badge.svg'), path.join(SITE, 'assets/app-store-badge.svg'));
+copy(path.join(SKILL, 'assets/google-play-badge.svg'), path.join(SITE, 'assets/google-play-badge.svg'));
 copy(path.join(HERE, 'site/app-store-badge-es.svg'), path.join(SITE, 'assets/app-store-badge-es.svg'));
 fs.writeFileSync(path.join(SITE, '.nojekyll'), '');
 
@@ -63,6 +82,8 @@ for (const s of [en, es]) {
     live: ON_SALE,
     appId: APP.ascAppId,
     appStoreUrl: `https://apps.apple.com/app/id${APP.ascAppId}`,
+    playLive: ON_PLAY,
+    playUrl: PLAY_URL,
     email: APP.contactEmail,
     images: m.images,
     screens: { player: m.player, plays: m.plays },

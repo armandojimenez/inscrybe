@@ -17,19 +17,26 @@ function headline(lines, accent) {
   }).join(' ');
 }
 
-/** The App Store badge and what it's for: while Inscrybe isn't on sale the badge links nowhere and "Coming soon" sits
- *  over the devices beside it; once it is (build.mjs asks the App Store), the badge links to its page and only the
- *  devices are said */
+/** One store's badge: a link to its page once Inscrybe is there (build.mjs asks each store), a badge that links nowhere
+ *  before */
+function badge(store, live, url, file, alt, h, ctx) {
+  const img = `<img src="${ctx.root}assets/${file}" alt="${esc(alt)}" height="${h}" width="${Math.round(h * 135 / 40)}">`;
+  return live
+    ? `<a class="store-badge" data-store="${store}" href="${url}" target="_blank" rel="noopener">${img}</a>`
+    : `<span class="store-badge store-badge--soon" data-store="${store}" aria-disabled="true">${img}</span>`;
+}
+
+/** The two stores' badges and what they're for: a store Inscrybe isn't in yet says "Coming soon" (naming it when the
+ *  other store has it) above the devices */
 function get(s, ctx, size = 'hero') {
   const h = size === 'cta' ? 56 : 48;
   // Apple's badge in the page's language (its marketing tools: the Spanish one says "Descárgalo en el App Store")
-  const file = s.locale === 'es' ? 'app-store-badge-es.svg' : 'app-store-badge.svg';
-  const img = `<img src="${ctx.root}assets/${file}" alt="${esc(ctx.live ? s.badge.live : s.badge.soon)}" height="${h}" width="${Math.round(h * 120 / 40)}">`;
-  const badge = ctx.live
-    ? `<a class="store-badge" data-store="apple" href="${ctx.appStoreUrl}" target="_blank" rel="noopener">${img}</a>`
-    : `<span class="store-badge store-badge--soon" data-store="apple" aria-disabled="true">${img}</span>`;
-  const soon = ctx.live ? '' : `<span class="get__soon">${esc(s.badge.soonShort)}</span>`;
-  return `<div class="get get--${size}">${badge}<p class="get__label">${soon}<span class="get__devices">${esc(s.hero.devices)}</span></p></div>`;
+  const appleFile = s.locale === 'es' ? 'app-store-badge-es.svg' : 'app-store-badge.svg';
+  const apple = badge('apple', ctx.live, ctx.appStoreUrl, appleFile, ctx.live ? s.badge.live : s.badge.soon, h, ctx);
+  const google = badge('google', ctx.playLive, ctx.playUrl, 'google-play-badge.svg', ctx.playLive ? s.badge.playLive : s.badge.playSoon, h, ctx);
+  const soonWords = !ctx.live && !ctx.playLive ? s.badge.soonShort : !ctx.live ? s.badge.soon : !ctx.playLive ? s.badge.playSoon : '';
+  const soon = soonWords ? `<span class="get__soon">${esc(soonWords)}</span>` : '';
+  return `<div class="get get--${size}"><div class="get__badges">${apple}${google}</div><p class="get__label">${soon}<span class="get__devices">${esc(s.hero.devices)}</span></p></div>`;
 }
 
 /** A composed picture: WebP from the deck's engine, its size known so nothing moves as it loads */
@@ -129,7 +136,7 @@ export function page(s, ctx) {
     description: s.meta.description,
     applicationCategory: 'MusicApplication',
     applicationSubCategory: 'LifestyleApplication',
-    operatingSystem: 'iOS 26.1 or later',
+    operatingSystem: ['iOS 26.1 or later', 'Android 10 or later'],
     inLanguage: s.htmlLang,
     url: canonical,
     image: `${ctx.origin}assets/icon-512.png`,
@@ -139,7 +146,11 @@ export function page(s, ctx) {
     ],
     publisher: { '@type': 'Organization', name: 'Believe PR', url: 'https://armandojimenez.dev/' },
     author: { '@type': 'Person', name: 'Armando Jimenez', url: 'https://armandojimenez.dev/' },
-    ...(ctx.live ? { downloadUrl: ctx.appStoreUrl, installUrl: ctx.appStoreUrl, sameAs: [ctx.appStoreUrl] } : {}),
+    // The stores Inscrybe is in: their pages are its download links
+    ...(() => {
+      const stores = [ctx.live && ctx.appStoreUrl, ctx.playLive && ctx.playUrl].filter(Boolean);
+      return stores.length ? { downloadUrl: stores, installUrl: stores, sameAs: stores } : {};
+    })(),
   };
   const words = s.hero.words.map((w, i) => `<span class="word word--${i + 1}">${esc(w)}</span>`).join('');
 
@@ -249,7 +260,7 @@ ${feature(s, ctx, { id: 'privacy', key: 'privacy', look: 'light', mode: 'player'
     <section class="closing" id="download" aria-labelledby="download-title">
       <img class="closing__icon" src="${ctx.root}assets/icon-256.png" alt="" width="128" height="128" loading="lazy">
       <h2 id="download-title" class="closing__mark"><span class="wordmark">Inscrybe</span>${closingLine}</h2>
-      <p class="lead">${esc(ctx.live ? s.download.leadLive : s.download.leadSoon)}</p>
+      <p class="lead">${esc(ctx.live ? s.download.leadLive : s.download.leadSoon)} ${esc(ctx.playLive ? s.download.playLive : s.download.playSoon)}</p>
       ${get(s, ctx, 'cta')}
     </section>
 
@@ -287,7 +298,7 @@ ${feature(s, ctx, { id: 'privacy', key: 'privacy', look: 'light', mode: 'player'
         <li><a href="${ctx.toOther}" hreflang="${other.hreflang}" lang="${other.hreflang}">${esc(other.label)}</a></li>
       </ul>
       <p class="footer__legal">${esc(s.footer.copyright)} <a href="${s.footer.madeUrl}">${esc(s.footer.made)}</a></p>
-      <p class="footer__apple">${esc(s.footer.apple)}</p>
+      <p class="footer__apple">${esc(s.footer.apple)} ${esc(s.footer.google)}</p>
     </div>
   </footer>
 

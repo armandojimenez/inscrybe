@@ -11,8 +11,8 @@ export default {
   other: { locale: 'es', label: 'Español', short: 'ES', path: 'es/', hreflang: 'es' },
 
   meta: {
-    title: 'Inscrybe: Subliminal Maker and Player for iPhone',
-    description: 'Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch control and a Studio that measures how hidden each voice is.',
+    title: 'Inscrybe: Subliminal Maker and Player for iPhone and Android',
+    description: 'Play the subliminals you have and make your own. Repeat counts, a sleep timer, Apple Watch and Wear OS control and a Studio that measures how hidden each voice is.',
     ogTitle: 'Inscrybe: play your subliminals, make your own',
     ogImageAlt: 'The Inscrybe icon’s two glass planes with a line of light passing through them',
   },
@@ -31,13 +31,15 @@ export default {
     soon: 'Coming soon to the App Store',
     soonShort: 'Coming soon',
     live: 'Download on the App Store',
+    playSoon: 'Coming soon to Google Play',
+    playLive: 'Get it on Google Play',
   },
 
   hero: {
     title: ['Play your subliminals.', 'Make your own.'],
     accent: 'your own',
-    lead: 'Play the subliminals you have and make your own, each voice measured so you know how hidden it is. Loop a track as many times as you want and control it from Apple Watch.',
-    devices: 'For iPhone, iPad and iPhone Duo',
+    lead: 'Play the subliminals you have and make your own, each voice measured so you know how hidden it is. Loop a track as many times as you want and control it from Apple Watch or a Wear OS watch.',
+    devices: 'For iPhone, iPad, iPhone Duo and Android',
     words: ['I love who I am.', 'I am a money magnet.', 'Love comes to me easily.', 'I am unstoppable.'],
   },
 
@@ -69,13 +71,13 @@ export default {
     visuals: {
       title: ['See your affirmations', 'while you listen'],
       accent: 'affirmations',
-      lead: 'Visuals show your affirmations on screen while a track plays, flashed within photosensitivity limits or steady, over your cover or a slideshow of your own pictures. Save them as a video to Photos.',
+      lead: 'Visuals show your affirmations on screen while a track plays, flashed within photosensitivity limits or steady, over your cover or a slideshow of your own pictures. Save them as a video to Photos or your gallery.',
       alt: 'Visuals in their Subliminal look: affirmations flashing over the player',
     },
     everywhere: {
       title: ['Control it from', 'your Apple Watch'],
       accent: 'Apple Watch',
-      lead: 'Your subliminals wherever you listen: the Lock Screen, Control Center, widgets, CarPlay, Siri and Shortcuts, AirPlay, and an Apple Watch remote with complications.',
+      lead: 'Your subliminals wherever you listen: the Lock Screen, Control Center, widgets, CarPlay, Siri and Shortcuts, AirPlay, and an Apple Watch remote with complications. On Android: the lock screen, widgets, Quick Settings, Android Auto, and a Wear OS remote with its Tile and complications.',
       places: ['Lock Screen', 'Control Center', 'Widgets', 'CarPlay', 'Siri and Shortcuts', 'AirPlay', 'Apple Watch'],
       alt: 'The Apple Watch app controlling “I Am Amazing (2x)” as it plays on the iPhone',
     },
@@ -93,7 +95,7 @@ export default {
         ['Layers of clips', 'Each with its own start, pauses, repeats, fades, volume, side, speed and pitch.'],
         ['Built-in sounds', 'Rain, ocean, forest, fire and noise, and binaural beats from delta to gamma (headphones needed).'],
         ['Silent voice', 'Moves a voice above hearing for silent subliminals, with a check before you save.'],
-        ['Save to Library', 'As AAC, WAV, MP3 or Apple Lossless. Edit the project and save again to replace it.'],
+        ['Save to Library', 'As AAC, WAV or MP3, or Apple Lossless on Apple devices. Edit the project and save again to replace it.'],
       ],
       alt: 'A subliminal project in Inscrybe’s Studio: its Voice, Music and Rain layers with their waveforms and volumes',
     },
@@ -103,7 +105,7 @@ export default {
       lead: 'Record line by line with your script on screen and a count-in, and record any line again. Or let Speak turn a written script into a voice on your device, with your own pronunciations.',
       facts: [
         ['The Affirmation Library', 'Ready-made affirmations by category, in first person, second person or with a name.'],
-        ['My Recordings', 'Every take you keep, on all your devices.'],
+        ['My Recordings', 'Every take you keep, ready to add to any project.'],
       ],
       alt: 'Recording a script line by line, with Speak the Script behind it',
     },
@@ -120,10 +122,10 @@ export default {
     privacy: {
       title: ['Keep your subliminals', 'private'],
       accent: 'private',
-      lead: 'Discreet Mode shows made-up names and covers on the Lock Screen, in CarPlay, in widgets and on Apple Watch. Hidden is a collection with its own lock, and App Lock opens Inscrybe with Face ID, Touch ID or a PIN.',
+      lead: 'Discreet Mode shows made-up names and covers on the lock screen, in CarPlay and Android Auto, in widgets and on your watch. Hidden is a collection with its own lock, and App Lock opens Inscrybe with Face ID, Touch ID, your fingerprint or face, or a PIN.',
       facts: [
         ['No analytics', 'Nothing logs how you use the app. Crash reports never carry your tracks or scripts, and you can turn them off.'],
-        ['iCloud sync', 'Your Library, projects and recordings on all your devices, in your own iCloud.'],
+        ['Sync and backups', 'On Apple devices, your Library, projects and recordings sync through your own iCloud. On Android, Backup & Restore keeps a copy wherever you choose.'],
       ],
       alt: 'The same Lock Screen twice: “Become a Millionaire (2x)” playing, and as Discreet Mode shows it, “Afterglow Avenue” by Lucia Wren',
     },
@@ -139,13 +141,15 @@ export default {
     accent: 'your own',
     leadSoon: 'Inscrybe is coming to the App Store for iPhone, iPad and iPhone Duo, with CarPlay and Apple Watch.',
     leadLive: 'Inscrybe is on the App Store for iPhone, iPad and iPhone Duo, with CarPlay and Apple Watch.',
+    playSoon: 'On Android, it’s coming to Google Play, with Android Auto and Wear OS.',
+    playLive: 'On Android, it’s on Google Play, with Android Auto and Wear OS.',
   },
 
   support: {
     title: 'Support',
     lead: 'Answers to what people ask most. For anything else, write to us.',
     contactTitle: 'Write to us',
-    contactLead: 'Tell us what you were doing when it happened and which iPhone or iPad you use.',
+    contactLead: 'Tell us what you were doing when it happened and which phone or tablet you use.',
     copy: 'Copy email address',
     copied: 'Email address copied',
     fromApp: 'From the app: Settings › Contact. With Include Device Information on, your message carries the details that help find a bug, never your tracks or scripts.',
@@ -153,10 +157,10 @@ export default {
       {
         title: 'Listening',
         items: [
-          ['How do I bring my subliminals into Inscrybe?', 'In the Library, tap + and choose Import Files, Import Folder or Import from a Link. You can also open an audio file in Inscrybe from Files, AirDrop or the Share sheet. A link has to point to the file itself; streaming services aren’t supported.'],
+          ['How do I bring my subliminals into Inscrybe?', 'In the Library, tap + and choose Import Files, Import Folder or Import from a Link. You can also open an audio file in Inscrybe from Files, AirDrop or the Share sheet, or on Android from Files or Share. A link has to point to the file itself; streaming services aren’t supported.'],
           ['How do I repeat a track a set number of times?', 'In the player, tap Repeat, then under Repeat This Track choose a number of times or Custom…. With Then Play Next on, the next track plays after the last time; otherwise playback stops there.'],
           ['How does the sleep timer work?', 'Tap the moon in the player and choose a length in minutes, End of Track, End of Folder or End of Playlist, depending on what’s playing. The sound fades out at the end.'],
-          ['Does the Apple Watch app play audio?', 'No. It’s a remote for your iPhone: it shows what’s playing, controls it and the sleep timer, and opens your Library and playlists. Your iPhone plays the audio.'],
+          ['Does the watch app play audio?', 'No. On Apple Watch and on a Wear OS watch, it’s a remote for your phone: it shows what’s playing, controls it and the sleep timer, and opens your Library and playlists. Your phone plays the audio.'],
         ],
       },
       {
@@ -169,17 +173,17 @@ export default {
       {
         title: 'Privacy',
         items: [
-          ['What does Discreet Mode change?', 'A disguised track shows a made-up name and cover in Inscrybe and outside it: on the Lock Screen, in CarPlay, in widgets, on Apple Watch, in Siri and in the names of files you share. Turn it on in Settings › Privacy › Discreet Mode, for Private Items or Everything. Show Real Names shows the real ones in Inscrybe until you leave the app.'],
-          ['I forgot my App Lock PIN.', 'On the lock screen, tap Forgot PIN? and get back in with your device’s passcode or your recovery code, whichever you chose when you set up App Lock.'],
+          ['What does Discreet Mode change?', 'A disguised track shows a made-up name and cover in Inscrybe and outside it: on the lock screen, in CarPlay and Android Auto, in widgets, on your watch, in Siri and in the names of files you share. Turn it on in Settings › Privacy › Discreet Mode, for Private Items or Everything. Show Real Names shows the real ones in Inscrybe until you leave the app.'],
+          ['I forgot my App Lock PIN.', 'On the lock screen, tap Forgot PIN? and get back in with your device’s passcode or screen lock, or your recovery code, whichever you chose when you set up App Lock.'],
           ['What does Inscrybe collect?', 'Inscrybe has no analytics: nothing logs how you use the app. If it crashes, a report is sent without your track names, your scripts or anything about you. Turn off Share Crash Reports in Settings › Privacy to send none.'],
         ],
       },
       {
         title: 'Your account',
         items: [
-          ['How do I use Inscrybe on all my devices?', 'Turn on Settings › iCloud Sync on each device signed in to the same Apple Account. Your Library, playlists, projects and recordings sync through your own iCloud, and audio downloads when it plays.'],
-          ['How do I restore my subscription on a new device?', 'In Inscrybe, open Settings and tap Restore Purchases, signed in with the Apple Account you subscribed with.'],
-          ['How do I change or cancel my subscription?', 'In Inscrybe, open Settings and tap Manage Subscription, or go to the Settings app, tap your name, then Subscriptions. Apple handles billing.'],
+          ['How do I use Inscrybe on all my devices?', 'Turn on Settings › iCloud Sync on each device signed in to the same Apple Account. Your Library, playlists, projects and recordings sync through your own iCloud, and audio downloads when it plays. On Android, move your Library to a new phone with Settings › Backup & Restore.'],
+          ['How do I restore my subscription on a new device?', 'In Inscrybe, open Settings and tap Restore Purchases, signed in with the Apple Account or Google Account you subscribed with.'],
+          ['How do I change or cancel my subscription?', 'In Inscrybe, open Settings and tap Manage Subscription, or go to the Settings app, tap your name, then Subscriptions. On Android, open Google Play, tap your profile picture, then Payments & subscriptions. Apple and Google Play handle billing.'],
         ],
       },
     ],
@@ -194,5 +198,6 @@ export default {
     made: 'Made by Armando Jimenez',
     madeUrl: 'https://armandojimenez.dev/',
     apple: 'Apple, the Apple logo, iPhone, iPad, Apple Watch, CarPlay and Siri are trademarks of Apple Inc.',
+    google: 'Google Play, the Google Play logo, Android, Android Auto and Wear OS are trademarks of Google LLC.',
   },
 };

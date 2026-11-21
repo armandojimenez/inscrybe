@@ -10,8 +10,8 @@ export default {
   other: { locale: 'en', label: 'English', short: 'EN', path: '', hreflang: 'en' },
 
   meta: {
-    title: 'Inscrybe: crear subliminales y reproducirlos en iPhone',
-    description: 'Reproduce tus subliminales y crea los tuyos. Repeticiones, temporizador, Apple Watch y un Estudio que mide qué tan oculta está cada voz.',
+    title: 'Inscrybe: crear subliminales y reproducirlos en iPhone y Android',
+    description: 'Reproduce tus subliminales y crea los tuyos. Repeticiones, temporizador, Apple Watch y Wear OS, y un Estudio que mide qué tan oculta está cada voz.',
     ogTitle: 'Inscrybe: reproduce tus subliminales, crea los tuyos',
     ogImageAlt: 'Los dos planos de cristal del icono de Inscrybe con una línea de luz que los atraviesa',
   },
@@ -30,13 +30,15 @@ export default {
     soon: 'Próximamente en el App Store',
     soonShort: 'Próximamente',
     live: 'Descárgalo en el App Store',
+    playSoon: 'Próximamente en Google Play',
+    playLive: 'Disponible en Google Play',
   },
 
   hero: {
     title: ['Reproduce tus subliminales.', 'Crea los tuyos.'],
     accent: 'los tuyos',
-    lead: 'Reproduce tus subliminales y crea tus propios audios midiendo qué tan oculta está cada voz. Repite una pista las veces que quieras y contrólala desde el Apple Watch.',
-    devices: 'Para iPhone, iPad y iPhone Duo',
+    lead: 'Reproduce tus subliminales y crea tus propios audios midiendo qué tan oculta está cada voz. Repite una pista las veces que quieras y contrólala desde el Apple Watch o un reloj Wear OS.',
+    devices: 'Para iPhone, iPad, iPhone Duo y Android',
     words: ['Me amo tal como soy.', 'Soy un imán para el dinero.', 'El amor llega fácilmente a mi vida.', 'Nada me detiene.'],
   },
 
@@ -68,13 +70,13 @@ export default {
     visuals: {
       title: ['Mira tus afirmaciones', 'mientras escuchas'],
       accent: 'afirmaciones',
-      lead: 'Los Visuales muestran tus afirmaciones en pantalla mientras suena una pista, en destellos dentro de los límites de fotosensibilidad o fijas, sobre tu portada o una presentación con tus fotos. Guárdalos como video en Fotos.',
+      lead: 'Los Visuales muestran tus afirmaciones en pantalla mientras suena una pista, en destellos dentro de los límites de fotosensibilidad o fijas, sobre tu portada o una presentación con tus fotos. Guárdalos como video en Fotos o en tu galería.',
       alt: 'Los Visuales en su estilo Subliminal: afirmaciones que destellan sobre el reproductor',
     },
     everywhere: {
       title: ['Contrólalo desde', 'tu Apple Watch'],
       accent: 'Apple Watch',
-      lead: 'Tus subliminales donde escuches: la pantalla bloqueada, el Centro de control, los widgets, CarPlay, Siri y Atajos, AirPlay, y un control remoto en el Apple Watch con complicaciones.',
+      lead: 'Tus subliminales donde escuches: la pantalla bloqueada, el Centro de control, los widgets, CarPlay, Siri y Atajos, AirPlay, y un control remoto en el Apple Watch con complicaciones. En Android: la pantalla de bloqueo, los widgets, la Configuración rápida, Android Auto y un control remoto en Wear OS con una tarjeta y complicaciones.',
       places: ['Pantalla bloqueada', 'Centro de control', 'Widgets', 'CarPlay', 'Siri y Atajos', 'AirPlay', 'Apple Watch'],
       alt: 'La app del Apple Watch controlando «Soy increíble (2x)» mientras suena en el iPhone',
     },
@@ -92,7 +94,7 @@ export default {
         ['Capas de clips', 'Cada uno con su inicio, pausas, repeticiones, desvanecimientos, volumen, lado, velocidad y tono.'],
         ['Sonidos integrados', 'Lluvia, mar, bosque, fuego y ruido, y tonos binaurales de delta a gamma (con audífonos o auriculares).'],
         ['Voz silenciosa', 'Sube una voz por encima de lo audible para subliminales silenciosos, con una comprobación antes de guardar.'],
-        ['Guardar en la biblioteca', 'Como AAC, WAV, MP3 o Apple Lossless. Edita el proyecto y guárdalo otra vez para reemplazarlo.'],
+        ['Guardar en la biblioteca', 'Como AAC, WAV o MP3, o Apple Lossless en dispositivos Apple. Edita el proyecto y guárdalo otra vez para reemplazarlo.'],
       ],
       alt: 'Un proyecto del Estudio de Inscrybe para crear subliminales: sus capas de voz, música y lluvia con sus ondas y volúmenes',
     },
@@ -102,7 +104,7 @@ export default {
       lead: 'Graba línea por línea con tu guion en pantalla y una cuenta regresiva, y vuelve a grabar cualquier línea. O usa Generar voz para leer en voz alta un guion escrito con las voces de tu dispositivo y tus pronunciaciones.',
       facts: [
         ['La Biblioteca de afirmaciones', 'Afirmaciones listas por categoría, en primera persona, en segunda o con un nombre.'],
-        ['Mis grabaciones', 'Cada toma que guardas, en todos tus dispositivos.'],
+        ['Mis grabaciones', 'Cada toma que guardas, lista para agregarla a cualquier proyecto.'],
       ],
       alt: 'Grabando un guion línea por línea, con Generar voz a partir del guion detrás',
     },
@@ -119,10 +121,10 @@ export default {
     privacy: {
       title: ['Mantén en privado', 'tus subliminales'],
       accent: 'en privado',
-      lead: 'El Modo discreto muestra nombres y portadas inventados en la pantalla bloqueada, en CarPlay, en los widgets y en el Apple Watch. Ocultos es una colección con su propio bloqueo, y el Bloqueo de la app abre Inscrybe con Face ID, Touch ID o un PIN.',
+      lead: 'El Modo discreto muestra nombres y portadas inventados en la pantalla bloqueada, en CarPlay y Android Auto, en los widgets y en tu reloj. Ocultos es una colección con su propio bloqueo, y el Bloqueo de la app abre Inscrybe con Face ID, Touch ID, tu huella o tu rostro, o un PIN.',
       facts: [
         ['Sin analíticas', 'Nada registra cómo usas la app. Los informes de errores nunca incluyen tus pistas ni tus guiones, y puedes desactivarlos.'],
-        ['Sincronización con iCloud', 'Tu biblioteca, tus proyectos y tus grabaciones en todos tus dispositivos, en tu propio iCloud.'],
+        ['Sincronización y copias', 'En dispositivos Apple, tu biblioteca, tus proyectos y tus grabaciones se sincronizan en tu propio iCloud. En Android, Copia de seguridad y restauración guarda una copia donde elijas.'],
       ],
       alt: 'La misma pantalla bloqueada dos veces: «Mentalidad millonaria (2x)» sonando, y como la muestra el Modo discreto, «Avenida del resplandor que queda» de Lucia Wren',
     },
@@ -138,13 +140,15 @@ export default {
     accent: 'los tuyos',
     leadSoon: 'Inscrybe llega pronto al App Store para iPhone, iPad y iPhone Duo, con CarPlay y Apple Watch.',
     leadLive: 'Inscrybe ya está en el App Store para iPhone, iPad y iPhone Duo, con CarPlay y Apple Watch.',
+    playSoon: 'En Android, llega pronto a Google Play, con Android Auto y Wear OS.',
+    playLive: 'En Android, ya está en Google Play, con Android Auto y Wear OS.',
   },
 
   support: {
     title: 'Ayuda',
     lead: 'Respuestas a lo que más nos preguntan. Para cualquier otra cosa, escríbenos.',
     contactTitle: 'Escríbenos',
-    contactLead: 'Cuéntanos qué estabas haciendo cuando pasó y qué iPhone o iPad usas.',
+    contactLead: 'Cuéntanos qué estabas haciendo cuando pasó y qué teléfono o tableta usas.',
     copy: 'Copiar correo',
     copied: 'Correo copiado',
     fromApp: 'Desde la app: Configuración › Contacto. Con Incluir información del dispositivo activado, tu mensaje lleva los datos que ayudan a encontrar un error, nunca tus pistas ni tus guiones.',
@@ -152,10 +156,10 @@ export default {
       {
         title: 'Escuchar',
         items: [
-          ['¿Cómo agrego mis subliminales a Inscrybe?', 'En la Biblioteca, toca + y elige Importar archivos, Importar carpeta o Importar desde un enlace. También puedes abrir un archivo de audio en Inscrybe desde Archivos, AirDrop o el menú Compartir. El enlace tiene que llevar directo al archivo; no se admiten servicios de streaming.'],
+          ['¿Cómo agrego mis subliminales a Inscrybe?', 'En la Biblioteca, toca + y elige Importar archivos, Importar carpeta o Importar desde un enlace. También puedes abrir un archivo de audio en Inscrybe desde Archivos, AirDrop o el menú Compartir, o en Android desde Archivos o Compartir. El enlace tiene que llevar directo al archivo; no se admiten servicios de streaming.'],
           ['¿Cómo repito una pista un número de veces?', 'En el reproductor, toca Repetir y, en Repetir esta pista, elige cuántas veces o Personalizado…. Con Luego reproducir a continuación activado, después de la última vez suena la siguiente pista; si no, la reproducción se detiene ahí.'],
           ['¿Cómo funciona el temporizador?', 'Toca la luna en el reproductor y elige una duración en minutos, Al terminar la pista, Al terminar la carpeta o Al terminar la lista de reproducción, según lo que esté sonando. Al final, el sonido se desvanece.'],
-          ['¿La app del Apple Watch reproduce audio?', 'No. Es un control remoto de tu iPhone: muestra lo que suena, controla la reproducción y el temporizador, y abre tu biblioteca y tus listas. El audio suena en tu iPhone.'],
+          ['¿La app del reloj reproduce audio?', 'No. En el Apple Watch y en un reloj Wear OS es un control remoto de tu teléfono: muestra lo que suena, controla la reproducción y el temporizador, y abre tu biblioteca y tus listas. El audio suena en tu teléfono.'],
         ],
       },
       {
@@ -168,17 +172,17 @@ export default {
       {
         title: 'Privacidad',
         items: [
-          ['¿Qué cambia el Modo discreto?', 'Una pista disfrazada muestra un nombre y una portada inventados en Inscrybe y fuera de ella: en la pantalla bloqueada, en CarPlay, en los widgets, en el Apple Watch, en Siri y en los nombres de los archivos que compartes. Actívalo en Configuración › Privacidad › Modo discreto, para Elementos privados o Todo. Mostrar nombres reales muestra los reales dentro de Inscrybe hasta que sales de la app.'],
-          ['Olvidé el PIN del Bloqueo de la app.', 'En la pantalla de bloqueo, toca ¿Olvidaste el PIN? y vuelve a entrar con el código de acceso de tu dispositivo o con tu código de recuperación, según lo que elegiste al activar el Bloqueo de la app.'],
+          ['¿Qué cambia el Modo discreto?', 'Una pista disfrazada muestra un nombre y una portada inventados en Inscrybe y fuera de ella: en la pantalla bloqueada, en CarPlay y Android Auto, en los widgets, en tu reloj, en Siri y en los nombres de los archivos que compartes. Actívalo en Configuración › Privacidad › Modo discreto, para Elementos privados o Todo. Mostrar nombres reales muestra los reales dentro de Inscrybe hasta que sales de la app.'],
+          ['Olvidé el PIN del Bloqueo de la app.', 'En la pantalla de bloqueo, toca ¿Olvidaste el PIN? y vuelve a entrar con el código de acceso o el bloqueo de pantalla de tu dispositivo, o con tu código de recuperación, según lo que elegiste al activar el Bloqueo de la app.'],
           ['¿Qué datos recopila Inscrybe?', 'Inscrybe no tiene analíticas: nada registra cómo usas la app. Si se cierra inesperadamente, se envía un informe sin los nombres de tus pistas, tus guiones ni información sobre ti. Desactiva Compartir informes de errores en Configuración › Privacidad para no enviar ninguno.'],
         ],
       },
       {
         title: 'Tu cuenta',
         items: [
-          ['¿Cómo uso Inscrybe en todos mis dispositivos?', 'Activa Configuración › Sincronización con iCloud en cada dispositivo con la misma cuenta de Apple. Tu biblioteca, tus listas, tus proyectos y tus grabaciones se sincronizan en tu propio iCloud, y el audio se descarga cuando suena.'],
-          ['¿Cómo restauro mi suscripción en un dispositivo nuevo?', 'En Inscrybe, abre Configuración y toca Restaurar compras, con la cuenta de Apple con la que te suscribiste.'],
-          ['¿Cómo cambio o cancelo mi suscripción?', 'En Inscrybe, abre Configuración y toca Administrar suscripción, o ve a la app Configuración, toca tu nombre y luego Suscripciones. Apple se encarga de los cobros.'],
+          ['¿Cómo uso Inscrybe en todos mis dispositivos?', 'Activa Configuración › Sincronización con iCloud en cada dispositivo con la misma cuenta de Apple. Tu biblioteca, tus listas, tus proyectos y tus grabaciones se sincronizan en tu propio iCloud, y el audio se descarga cuando suena. En Android, lleva tu biblioteca a un teléfono nuevo con Configuración › Copia de seguridad y restauración.'],
+          ['¿Cómo restauro mi suscripción en un dispositivo nuevo?', 'En Inscrybe, abre Configuración y toca Restaurar compras, con la cuenta de Apple o de Google con la que te suscribiste.'],
+          ['¿Cómo cambio o cancelo mi suscripción?', 'En Inscrybe, abre Configuración y toca Administrar suscripción, o ve a la app Configuración, toca tu nombre y luego Suscripciones. En Android, abre Google Play, toca tu foto de perfil y luego Pagos y suscripciones. Apple y Google Play se encargan de los cobros.'],
         ],
       },
     ],
@@ -193,5 +197,6 @@ export default {
     made: 'Hecho por Armando Jimenez',
     madeUrl: 'https://armandojimenez.dev/es/',
     apple: 'Apple, el logotipo de Apple, iPhone, iPad, Apple Watch, CarPlay y Siri son marcas comerciales de Apple Inc.',
+    google: 'Google Play, el logotipo de Google Play, Android, Android Auto y Wear OS son marcas comerciales de Google LLC.',
   },
 };

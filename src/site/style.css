@@ -118,6 +118,8 @@ h1 .line, h2 .line, .closing__line .line { display: block; }
 
 /* ── Store badge and what it's for: the badge, and beside it "Coming soon" over the devices ─────────── */
 .get { display: flex; align-items: center; gap: 18px; }
+/* Two stores' badges side by side (Android's 16.4), what they're for under them (the overrides at the end) */
+.get__badges { display: flex; flex-wrap: wrap; gap: 12px; }
 .store-badge { display: inline-flex; text-decoration: none; flex: none; }
 .store-badge img { height: 48px; width: auto; }
 .store-badge--soon { cursor: default; }
@@ -397,3 +399,11 @@ h1 .line, h2 .line, .closing__line .line { display: block; }
   .store-badge img, .get--cta .store-badge img { height: 40px; }
   .get__soon { font-size: 14px; }
 }
+
+/* The two stores' badges (Android's 16.4): a row of badges with their words under it, at every width; last, so the
+   narrow screens' rules for the one badge's label beside it don't come back */
+.get { flex-direction: column; align-items: flex-start; gap: 12px; }
+.get__label { padding-inline-start: 0; box-shadow: none; }
+.get--cta { align-items: center; }
+.get--cta .get__badges { justify-content: center; }
+.get--cta .get__label { text-align: center; align-items: center; }
